@@ -6,12 +6,12 @@
     font-family: 'poppins', sans-serif;
 }
 body{
-    background-color: #FAF9F6;
+  background-image: linear-gradient(to right, #1f8282, #2c8b8b, #379594, #429e9d, #4ca7a6, #57b1b0, #61bab9);
 }
 .conatiner{
     width: 100%;
     height: 12vh;
-    background-color: #429E9D;
+    background-image: linear-gradient(45deg, #eeb815,#f7e886);
     background-position: center;
     background-size: cover;
     padding: 0 7%;
@@ -29,7 +29,7 @@ nav{
     cursor: pointer;
 }
 footer{
-    background-color:#429E9D;
+    background-color:#eeb815;
     border:0%;
     margin:0%;
 }
@@ -51,7 +51,15 @@ nav .btn{
     padding: 10px 30px;
     border-radius: 20px;
 }
-
+#homepage_contactus{
+  color:#429E9D;
+  background-color:#f7e77b;
+  border-color: #429E9D;
+  }
+#homepage_contactus:hover{
+background-color:#FAF9F6;
+color:#429E9D;
+}
 #not-embed{
   display: flex;
 }
@@ -62,13 +70,14 @@ nav .btn{
 }
 
 .content {
-  margin-top: 0%;
+  margin-top: 0.5%;
   padding: 4%;
   width: 100%;
   height: 80vh;
   background-image: url(Imgaes/Bg.jpg);
   background-size: 100% 100%; 
   background-repeat: no-repeat; 
+  
 }
 
 .content h1{
@@ -95,8 +104,9 @@ nav .btn{
 .committees {
     display: flex;
     flex-wrap: wrap;
+    background-image: linear-gradient(to right, #1f8282, #379594,  #4ca7a6,  #61bab9);
     justify-content: center;
-    background-color: azure;
+    background-color: #429E9D;
   }
   
   .committee {
@@ -114,12 +124,12 @@ nav .btn{
   }
 
   .committee h2 {
-    font-size: 18px;
+    font-size: 30px;
     margin-bottom: 10px;
   }
   
   .committee p {
-    font-size: 14px;
+    font-size: 20px;
     color: #666;
   }
   .Letters {
@@ -143,14 +153,16 @@ nav .btn{
     height: 50%;
   }
   
-  .Contentx h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
+  .Contentx h1 {
+    font-size: 40px;
+    margin-bottom: 0px;
+    
   }
   
   .Contentx p {
-    font-size: 14px;
+    font-size: 18px;
     color: #666;
+    padding-top: 5%;
   }
 
   .extra{
@@ -460,16 +472,9 @@ width: 100%;
     text-decoration: none;
 }
 #Warning{
-  margin-bottom: 50vh;
+  margin-bottom: 5px;
 }
-#homepage_contactu{
-  color:#FAF9F6;
-  background-color:#429E9D;
-  }
-#homepage_contactus:hover{
-background-color:#FAF9F6;
-color:#429E9D;
-}
+
 /* Media Queries */
 
 /* Mobile Devices (max-width: 768px) */
@@ -578,9 +583,6 @@ color:#429E9D;
 }
 #Warning{
   margin-bottom: 50vh;
-}
-#homepage_contactus:hover{
-
 }
 /* Tablet Devices (min-width: 769px) and (max-width: 1024px) */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
