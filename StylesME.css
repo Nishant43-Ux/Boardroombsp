@@ -5,16 +5,16 @@
     font-family: 'poppins', sans-serif;
 }
 body{
-    background-color: #FAF9F6;
+    background-color: #057061;
 }
 .conatiner{
     width: 100%;
     height: 12vh;
-    background-color: #191970;
+    background-color: #c7b053;
     background-position: center;
     background-size: cover;
     padding: 0 7%;
-    color: #191970;
+    color: #c7b053;
 
 }
 nav{
@@ -70,7 +70,7 @@ nav .btn{
 .content .btn{
     display: inline-block;
     margin-top: 30px;
-    background: #ff960b;
+    background: #29c495;
     color: #fff;
     text-decoration: none;
     padding: 15px 30px;
@@ -201,7 +201,7 @@ nav .btn{
 
 
 .MeetTheTeam {
-  background-color: #f7f7f7;
+  background-color: #057061;
   padding: 40px;
   text-align: center;
 }
@@ -210,7 +210,7 @@ nav .btn{
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #333;
+  color: #fff;
 }
 
 .TeamMembers {
@@ -316,7 +316,7 @@ flex-direction: column;
 height: 300vh;
 }
 .about-us {
-background-color: #f7f7f7;
+background-color: #057061;
 padding: 40px;
 text-align: center;
 }
