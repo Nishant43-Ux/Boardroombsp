@@ -49,3 +49,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// JavaScript to toggle the menu
+const menuBtn = document.getElementById('menu-btn');
+const navLinks = document.getElementById('nav-links');
+const closeMenu = document.getElementById('close-menu');
+
+// Toggle the menu
+menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    menuBtn.classList.toggle('active'); // Toggle menu button styles
+    closeMenu.style.display = 'block'; // Show close button
+});
+
+// Close the menu when close button is clicked
+closeMenu.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    menuBtn.classList.remove('active'); // Reset menu button styles
+    closeMenu.style.display = 'none'; // Hide close button
+});
+
+console.log('Bhaichara established');

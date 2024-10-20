@@ -1,197 +1,302 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+body {
+  background-color: #fff;
+  line-height: 1.6;
 }
-body{
-    background-color: #FAF9F6;
-}
-.conatiner{
-    width: 100%;
-    height: 12vh;
-    background-color: #191970;
-    background-position: center;
-    background-size: cover;
-    padding: 0 7%;
-    color: #c7b053;
 
-}
-nav{
-    width: 100%;
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-}
-.logo{
-    width: 50px;
-    cursor: pointer;
-    border-radius: 10px;
-}
-footer{
-    background-color:#eeb815;
-    border:0%;
-    margin:0%;
-}
-nav ul{
-    flex: 1;
-}
-nav ul li{
-    display: inline-block;
-    margin: 10px 20px;
-}
-nav ul li a{
-    color: #fff;
-    text-decoration: none;
-}
-nav .btn{
-    color: #fff;
-    text-decoration: none;
-    border: 2px solid #fff;
-    padding: 10px 30px;
-    border-radius: 20px;
-}
-#homepage_contactus{
-  color:#429E9D;
-  background-color:#f7e77b;
-  border-color: #429E9D;
-  }
-#homepage_contactus:hover{
-background-color:#FAF9F6;
-color:#429E9D;
-}
-#not-embed{
+/* Container */
+.container {
+  width: 100%;
+  height: auto; /* Changed to auto for responsiveness */
+  background-color: #c7b053;
+  padding: 0 7%;
+  color: #c7b053;
   display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align content */
 }
-#mu{
-  border-right:0%;
-  margin-right:0%; 
-  text-align: left;
+/* Base styling for the navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #c7b053;
 }
 
+.logo {
+  width: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#nav-links {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+}
+
+#nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 8px;
+  transition: background-color 0.3s;
+}
+
+#nav-links li a:hover {
+  background-color: #444;
+  border-radius: 4px;
+}
+
+/* Menu button for mobile, initially hidden on larger screens */
+.menu-btn {
+  display: none;
+  background: none;
+  color: white;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+  #nav-links {
+      display: none; /* Initially hide the menu on mobile */
+      flex-direction: column;
+      position: absolute;
+      top: 70px; /* Below the navbar */
+      right: 0;
+      background-color: #333;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+  }
+
+  /* Show the navigation when the 'active' class is added */
+  #nav-links.active {
+      display: flex;
+  }
+
+  .menu-btn {
+      display: block; /* Show the menu button on mobile */
+  }
+}
+
+
+/* Homepage Contact Us Button */
+#homepage_contactus {
+  color: #429e9d;
+  background-color: #f7e77b;
+  border-color: #429e9d;
+}
+
+#homepage_contactus:hover {
+  background-color: #faf9f6;
+  color: #429e9d;
+}
+
+/* Content */
 .content {
-  margin-top: 0.5%;
+  margin-top: 2%;
   padding: 4%;
   width: 100%;
-  height: 80vh;
+  height: auto; /* Changed to auto for flexibility */
   background-image: url(Imgaes/Bg.jpg);
-  background-size: 100% 100%; 
-  background-repeat: no-repeat; 
-  
+  background-size: cover; /* Cover for full background */
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content */
 }
 
-.content h1{
-    font-size: 88px;
-    margin-bottom: 15px;
+.content h1 {
+  font-size: 84px;
+  margin-bottom: 15px;
+  color: #f7e77b;
 }
-.content h1 span{
-    color: #ff960b;
+
+.content h1 span {
+  color: #429e9d;
 }
-.content p{
-    line-height: 22px;
-    font-size: 14px;
+
+.content p {
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center; /* Center text */
+  color: #f7e77b;
 }
-.content .btn{
-    display: inline-block;
-    margin-top: 30px;
-    background: #29c495;
-    color: #fff;
-    text-decoration: none;
-    padding: 15px 30px;
-    border-radius: 30px;
-    
+
+.content .btn {
+  display: inline-block;
+  margin-top: 30px;
+  background: #f7e77b;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  transition: background 0.3s ease; /* Smooth background transition */
 }
+
+/* Committees Section */
 .committees {
-    display: flex;
-    flex-wrap: wrap;
-    background-image: linear-gradient(to right, #1f8282, #379594,  #4ca7a6,  #61bab9);
-    justify-content: center;
-    background-color: #429E9D;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  background-image: linear-gradient(to right, #1f8282, #379594, #4ca7a6, #61bab9);
+  justify-content: center;
+  padding: 20px 0; /* Padding for spacing */
+}
+
+.committee {
+  margin: 20px; /* Reduced margin for better spacing */
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s; /* Hover effect */
+}
+
+.committee:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+.committee img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.committee h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.committee p {
+  font-size: 20px;
+  color: #666;
+}
+
+/* Letters Section */
+.Letters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
   
+}
+
+.extra {
+  flex: 1 1 100%; /* Full width for extra section */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  color: #111;
+}
+
+.extra img {
+  width: 60px; /* Adjust as needed */
+  height: auto;
+}
+
+.extra .btn {
+  background-color: #f7e77b; /* Adjust button color */
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.Contentx {
+  flex: 1 1 45%; /* Adjust size based on screen */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  transition: transform 0.3s; /* Card hover effect */
+}
+
+.Contentx:hover {
+  transform: scale(1.02); /* Scale effect on hover */
+}
+
+.Contentx img {
+  width: 100%; /* Responsive image */
+  height: auto;
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 1.5em; /* Adjust font size */
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1em; /* Adjust font size */
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 5%; /* Adjust padding for larger screens */
+  }
+}
+
+@media (max-width: 992px) {
+  nav {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align left */
+  }
+
+  .content h1 {
+    font-size: 60px; /* Adjust for medium screens */
+  }
+
+  .content p {
+    font-size: 16px; /* Adjust for medium screens */
+  }
+
   .committee {
-    margin: 60px;
-    width: 200px;
-    text-align: center;
+    width: 180px; /* Adjust committee card size */
   }
-  
-  .committee img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    src: url(Imgaes/background.png);
-  }
+}
 
-  .committee h2 {
-    font-size: 30px;
-    margin-bottom: 10px;
-  }
-  
-  .committee p {
-    font-size: 20px;
-    color: #666;
-  }
+@media (max-width: 768px) {
   .Letters {
-    margin-top: 200px;
-    margin-left:2%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column; /* Stack items on small screens */
+    align-items: center; /* Center align items */
   }
-  
+
   .Contentx {
-    margin-left:2%;
-    margin: 2px;
-    width: 49%;
-    height:60vh;
-    text-align: left;
-  }
-  
-  .Contentx img {
-    width: 50%;
-    height: 50%;
-  }
-  
-  .Contentx h1 {
-    font-size: 40px;
-    margin-bottom: 0px;
-    
-  }
-  
-  .Contentx p {
-    font-size: 18px;
-    color: #666;
-    padding-top: 5%;
+    flex: 1 1 100%; /* Full width for small screens */
   }
 
-  .extra{
-    margin-left:2%;
-    margin: 2px;
-    width: 100%;
-    height:60vh;
-    text-align: left;
-  }
-  .extra img{
-    width: 100%;
-    height: 40vh;
-    justify-content: center;
-    margin-top: 2%;
+  .content h1 {
+    font-size: 50px; /* Further reduce for smaller screens */
   }
 
-  .extra .btn{
-    padding: 20%;
-    display: inline-block;
-    margin-top: 30px;
-    background: #ff960b;
-    color: purple;
-    text-decoration: none;
-    padding: 15px 30px;
-    border-radius: 30px;
-    margin-left: 40%;
+  .content p {
+    font-size: 14px; /* Further reduce for smaller screens */
   }
-  * Add styles for the modal box *
+
+  .committee {
+    width: 150px; /* Smaller committee card size */
+  }
+
+  nav ul li {
+    margin: 5px 10px; /* Reduced margin for smaller screens */
+  }
+}
+
+/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -210,6 +315,8 @@ color:#429E9D;
   border: 1px solid #888;
   width: 80%;
   max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px; /* Rounded corners for modal */
 }
 
 .close {
@@ -217,6 +324,7 @@ color:#429E9D;
   float: right;
   font-size: 28px;
   font-weight: bold;
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .close:hover,
@@ -226,8 +334,7 @@ color:#429E9D;
   cursor: pointer;
 }
 
-
-
+/* Meet the Team */
 .MeetTheTeam {
   background-color: #057061;
   padding: 40px;
@@ -246,6 +353,7 @@ color:#429E9D;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .TeamMember {
   flex-basis: 30%;
   margin: 20px;
@@ -254,8 +362,11 @@ color:#429E9D;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 250px; 
-  margin: 20px; 
+  transition: transform 0.3s; /* Hover effect */
+}
+
+.TeamMember:hover {
+  transform: scale(1.05); /* Scale effect on hover */
 }
 
 .TeamMember img {
@@ -265,426 +376,501 @@ color:#429E9D;
   border-radius: 10px 10px 0 0;
 }
 
-.TeamMember h2 {
+.TeamMember h3 {
   font-size: 24px;
-  font-weight: bold;
-  margin-top: 0;
-  color: #333;
+  margin-top: 15px;
+  color: #057061;
 }
 
 .TeamMember p {
-  font-size: 14px;
+  font-size: 16px;
   color: #666;
-  margin-bottom: 20px;
 }
 
-.TeamMember .card-footer {
-  background-color: #f7f7f7;
-  padding: 10px;
-  border-top: 1px solid #ddd;
+/* Footer */
+footer {
+  background-color: #1c1c1c;
+  color: #f7e77b;
+  padding: 20px 0;
   text-align: center;
 }
 
-.TeamMember .card-footer a {
+footer a {
+  color: #f7e77b;
   text-decoration: none;
-  color: #337ab7;
 }
 
-.TeamMember .card-footer a:hover {
-  color: #23527c;
+footer a:hover {
+  text-decoration: underline; /* Underline effect on hover */
 }
 
-
-.Committee-Card{
-  margin-top: 10vh;
+/* Button Styles */
+.btn {
+  background-color: #057061; /* Main button color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
 }
 
-#Warning{
-  text-align: center;
+.btn:hover {
+  background-color: #045c54; /* Darker shade on hover */
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Custom Checkbox */
+.custom-checkbox {
+  display: flex;
   align-items: center;
 }
-.card {
-  border-radius: 10px; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-  width: 320px; 
-  margin: 20px; 
-  background-color: #fff;
-  padding: 20px; 
+
+.custom-checkbox input {
+  display: none; /* Hide default checkbox */
 }
 
-.card-image {
-  width: 100%; 
-  height: 200px; 
-  object-fit: cover; 
-  border-radius: 10px 10px 0 0; 
+.custom-checkbox label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
 }
 
-.card-content {
-  padding: 20px;
+.custom-checkbox label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #314CB6; /* Checkbox border color */
+  background-color: #fff; /* Checkbox background color */
+  border-radius: 4px; /* Rounded corners */
 }
 
-.card-content h2 {
-  font-size: 18px;
-  margin-bottom: 10px; }
-
-.card-content p {
-  font-size: 14px; 
-  color: #666; 
+.custom-checkbox input:checked + label:before {
+  background-color: #314CB6; /* Background color when checked */
 }
 
-.flexing{
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards; /* Fade-in animation */
+}
+/* About Section Styles */
+footer.About {
+  background-color: #057061;
+  padding: 10px; /* Reduced padding */
+  color: #fff;
   display: flex;
-  justify-content: space-around;
-  height: 100vh;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 2px solid #c7b053;
+  height: auto; /* Set height to auto to shrink to content size */
+  font-size: 14px; /* Reduce font size */
 }
 
-
-
-.mapping{
-display: flex;
-flex-direction: column;
-height: 300vh;
+footer.About #Socials {
+  text-align: center;
 }
+
+footer.About #Socials img {
+  margin: 5px; /* Reduced margin */
+  width: 30px; /* Smaller icon size */
+  height: auto;
+}
+
+footer.About #Socials a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer.About #Contact {
+  text-align: center;
+}
+
+footer.About #Contact p {
+  font-size: 14px; /* Reduced font size */
+  color: #f7e77b;
+  margin: 3px 0; /* Reduced margins */
+}
+
+footer.About #left_wing {
+  text-align: left;
+}
+
+footer.About #left_wing ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer.About #left_wing ul li {
+  margin: 5px 0; /* Reduced margin between list items */
+}
+
+footer.About #left_wing ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px; /* Reduced font size */
+}
+
+footer.About #left_wing ul li a:hover {
+  color: #c7b053;
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+  footer.About {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer.About #left_wing {
+    margin-top: 10px;
+  }
+
+  footer.About #Contact,
+  footer.About #Socials {
+    margin-bottom: 10px;
+  }
+}
+/* Mapping Section */
+.mapping {
+  max-width: 1200px; /* Constrain width */
+  margin: auto;
+}
+
+/* About Us Section */
 .about-us {
-background-color: #057061;
-padding: 40px;
-text-align: center;
+  background-color: #057061; /* About Us background */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .about-us h1 {
-font-size: 36px;
-margin-bottom: 20px;
+  font-size: 2em;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #111; /* Heading color */
 }
 
 .about-us p {
-font-size: 18px;
-margin-bottom: 30px;
+  font-size: 1.1em;
+  margin: 15px 0;
 }
 
-
+/* Events Section */
 .events {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
+  margin-top: 20px;
 }
 
 .event {
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 10px;
-padding: 20px;
-margin: 20px;
-width: 300px;
+  background-color: #fff; /* Event card background */
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .event h3 {
-font-size: 24px;
-margin-bottom: 10px;
-}
-
-.event p {
-font-size: 16px;
-margin-bottom: 20px;
+  font-size: 1.5em;
+  margin: 0 0 10px 0;
 }
 
 .event img {
-width: 100%;
-height: 150px;
-object-fit: cover;
-border-radius: 10px 10px 0 0;
+  width: 100%; /* Responsive image */
+  border-radius: 8px;
+  margin-top: 10px;
 }
 
-
+/* Map Section */
 .map {
-background-color: #f7f7f7;
-padding: 40px;
-text-align: center;
-height: 100vh;
+  margin-top: 40px;
+  text-align: center;
 }
 
 .map h2 {
-font-size: 24px;
-margin-bottom: 20px;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #111; /* Map heading color */
 }
 
 #map {
-border: 1px solid #ddd;
-border-radius: 10px;
-height: 500px;
-width: 100%;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-
-
-
-
-
-.About{
-    margin-left:2%;
-    margin: 2px;
-    width: 100%;
-    height:30vh;
-    text-align: left;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.About #Socials{
-    text-decoration: none;
-    align-items: center;
-    padding: 2%;
-    padding-right: 20%;
-    padding-left: 0%;
-    width: 30%;
-    height: auto;
-    justify-content: center;
-    border-radius: 20%;
-}
-.About #Socials img{
-  height: 4vh;
-  width: 4vh;
-
-}
-
-.About #Contact{
-    text-decoration: none;
-    width: 30%;
-    padding: 2%;
-    height: auto;
-    text-align: center;
-    border-radius: 20%;
-}
-.About #left_wing{
-    align-items: left;
-    width: 30%;
-    padding-left: 250px;
-    height: auto;
-    border-radius: 20%;
-}
-.About ul{
-    flex: 1;
-}
-.About #left_wing ul li{
-    display: inline-block;
-    margin: 10px 20px;
-}
-.About #left_wing ul li a{
-    color: #555;
-    text-decoration: none;
-}
-#Warning{
-  margin-bottom: 5px;
-}
-
-/* Media Queries */
-
-/* Mobile Devices (max-width: 768px) */
-@media only screen and (max-width: 768px) {
-  /* Navigation */
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-  nav ul {
-    flex-direction: column;
-  }
-  nav ul li {
-    margin: 10px 0;
-  }
-  nav .btn {
-    margin-top: 20px;
-  }
-  
-  /* Content */
-  .content {
-    height: auto;
-    padding: 20px;
-  }
-  .content h1 {
-    font-size: 48px;
-  }
-  .content p {
-    font-size: 16px;
-  }
-  
-  /* Committees */
-  .committees {
-    flex-direction: column;
-  }
-  .committee {
-    margin: 20px 0;
-    width: 100%;
-  }
-  
-  /* Letters */
-  .Letters {
-    flex-direction: column;
-  }
-  .Contentx {
-    margin: 20px;
-    width: 100%;
-  }
-  
-  /* Extra */
-  .extra {
-    margin: 20px 0;
-    width: 100%;
-  }
-  
-  /* Modal */
-  .modal-content {
-    width: 90%;
-    margin: 10% auto;
-  }
-  
-  /* Meet The Team */
-  .TeamMembers {
-    flex-direction: column;
-  }
-  .TeamMember {
-    margin: 20px 0;
-    width: 100%;
-  }
-  
-  /* About Us */
+/* Responsive Styles */
+@media (max-width: 768px) {
   .about-us {
-    padding: 20px;
+      padding: 15px; /* Padding adjustment for smaller screens */
   }
-  
-  /* Events */
-  .events {
-    flex-direction: column;
+
+  .about-us h1 {
+      font-size: 1.8em;
   }
-  .event {
-    margin: 20px 0;
-    width: 100%;
+
+  .about-us p {
+      font-size: 1em;
   }
-  
-  /* Map */
-  .map {
-    height: 50vh;
+
+  .event h3 {
+      font-size: 1.3em;
   }
-  
-  /* About */
-  .About {
-    flex-direction: column;
-  }
-  .About #Socials {
-    width: 100%;
-    padding: 10px;
-  }
-  .About #Contact {
-    width: 100%;
-    padding: 10px;
-  }
-  .About #left_wing {
-    width: 100%;
-    padding: 10px;
+
+  .map h2 {
+      font-size: 1.5em;
   }
 }
-#Warning{
-  margin-bottom: 50vh;
+
+@media (max-width: 480px) {
+  .about-us h1 {
+      font-size: 1.6em;
+  }
+
+  .about-us p {
+      font-size: 0.9em;
+  }
+
+  .event h3 {
+      font-size: 1.2em;
+  }
+
+  .map h2 {
+      font-size: 1.4em;
+  }
 }
-/* Tablet Devices (min-width: 769px) and (max-width: 1024px) */
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  /* Navigation */
-  nav {
-    flex-direction: row;
-  }
-  nav ul {
-    flex-direction: row;
-  }
-  nav ul li {
-    margin: 10px 20px;
-  }
-  nav .btn {
-    margin-top: 20px;
-  }
-  
-  /* Content */
-  .content {
-    height: 80vh;
-    padding: 40px;
-  }
-  .content h1 {
-    font-size: 64px;
-  }
-  .content p {
-    font-size: 18px;
-  }
-  
-  /* Committees */
-  .committees {
-    flex-direction: row;
-  }
-  .committee {
-    margin: 40px;
-    width: 250px;
-  }
-  
-  /* Letters */
-  .Letters {
-    flex-direction: row;
-  }
-  .Contentx {
-    margin: 40px;
-    width: 250px;
-  }
-  
-  /* Extra */
-  .extra {
-    margin: 40px;
-    width: 250px;
-  }
-  
-  /* Modal */
-  .modal-content {
-    width: 80%;
-    margin: 10% auto;
-  }
-  
-  /* Meet The Team */
-  .TeamMembers {
-    flex-direction: row;
-  }
+/* Meet The Team Section Styles */
+.MeetTheTeam {
+  background-color: #057061; /* Background color */
+  padding: 40px 20px; /* Padding for the section */
+  text-align: center; /* Center text alignment */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.MeetTheTeam h1 {
+  font-size: 2.5em; /* Heading size */
+  color: #111; /* Heading color */
+  margin-bottom: 20px; /* Space below heading */
+}
+
+/* Team Members Container */
+.TeamMembers {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center align members */
+  flex-wrap: wrap; /* Wrap items to next line on smaller screens */
+  margin: 20px 0; /* Space between rows */
+}
+
+/* Individual Team Member Card */
+.TeamMember {
+  background-color: #fff; /* Team member card background */
+  border-radius: 10px; /* Rounded corners for cards */
+  padding: 15px; /* Padding inside cards */
+  margin: 10px; /* Margin around cards */
+  flex: 0 1 calc(33.333% - 20px); /* Responsive width, three cards per row */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  transition: transform 0.3s ease; /* Transition effect on hover */
+}
+
+/* Team Member Hover Effect */
+.TeamMember:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Team Member Image */
+.TeamMember img {
+  width: 100%; /* Responsive image */
+  border-radius: 10px; /* Rounded corners for images */
+  max-height: 200px; /* Max height for images */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+/* Team Member Name */
+.TeamMember h2 {
+  font-size: 1.5em; /* Name size */
+  margin: 10px 0 5px; /* Spacing for name */
+  color: #111; /* Name color */
+}
+
+/* Team Member Position */
+.TeamMember p {
+  font-size: 1em; /* Position size */
+  margin: 0; /* No margin for position */
+  color: #555; /* Position text color */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .TeamMember {
-    margin: 40px;
-    width: 250px;
+      flex: 0 1 calc(50% - 20px); /* Two cards per row on smaller screens */
   }
-  
-  /* About Us */
-  .about-us {
-    padding: 40px;
+}
+
+@media (max-width: 480px) {
+  .TeamMember {
+      flex: 0 1 calc(100% - 20px); /* One card per row on mobile */
   }
-  
-  /* Events */
-  .events {
-    flex-direction: row;
+
+  .MeetTheTeam h1 {
+      font-size: 2em; /* Smaller heading size on mobile */
   }
-  .event {
-    margin: 40px;
-    width: 250px;
+}
+/* Committee Section Styles */
+.flexing {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack cards vertically */
+  align-items: center; /* Center align items */
+  padding: 20px; /* Padding around the section */
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 80vh; /* Limit height for scrolling */
+  background-color: #057061; /* Background color */
+  border-radius: 10px; /* Rounded corners */
+  width: auto;
+}
+
+/* Committee Card Styles */
+.Committee-Card {
+  width: 100%; /* Full width for cards */
+  max-width: 500px; /* Max width for cards */
+  margin: 15px 0; /* Space between cards */
+}
+
+.card {
+  background-color: #fff; /* Card background color */
+  border-radius: 10px; /* Rounded corners */
+  padding: 15px; /* Padding inside cards */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  transition: transform 0.3s ease; /* Transition for hover effect */
+}
+
+/* Card Image */
+.card-image {
+  width: 100%; /* Responsive image */
+  border-radius: 10px; /* Rounded corners for images */
+  max-height: 200px; /* Limit height for images */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+/* Card Content */
+.card-content {
+  padding: 10px 0; /* Padding for card content */
+}
+
+.card-content h2 {
+  font-size: 1.5em; /* Heading size */
+  color: #111; /* Heading color */
+  margin: 10px 0; /* Space below heading */
+}
+
+.card-content p {
+  font-size: 1em; /* Paragraph size */
+  color: #555; /* Paragraph text color */
+  margin: 0; /* No margin for paragraphs */
+}
+
+/* Button Styles */
+.view-guide-btn {
+  display: inline-block; /* Inline block for button */
+  background-color: #057061; /* Button background color */
+  color: #ffffff; /* Button text color */
+  padding: 10px 15px; /* Padding for button */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-align: center; /* Center text in button */
+  margin-top: 10px; /* Space above button */
+  transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+/* Button Hover Effect */
+.view-guide-btn:hover {
+  background-color: #057061; /* Change color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .Committee-Card {
+      width: 90%; /* Responsive width on smaller screens */
   }
-  
-  /* Map */
-  .map {
-    height: 70vh;
-  }
-  
-  /* About */
-  .About {
-    flex-direction: row;
-  }
-  .About #Socials {
-    width: 30%;
-    padding: 20px;
-  }
-  .About #Contact {
-    width: 30%;
-    padding: 20px;
-  }
-  .About #left_wing {
-    width: 30%;
-    padding: 20px;
-  }
+}
+/* General Styles for the Why PCD Section */
+.whypcd {
+  background-color: #057061; /* White background for the section */
+  border-radius: 10px; /* Rounded corners */
+  padding: 5px; /* Padding inside the section */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  display: flex; /* Flexbox layout for content */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center align items */
+}
+.whypcdin{
+  background-color: #fff; /* White background for the section */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the section */
+  margin: 20px; /* Margin outside the section */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  display: flex; /* Flexbox layout for content */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center align items */
+  width: auto;
+}
+
+.whypcd h2 {
+  font-size: 2em; /* Heading size */
+  margin-bottom: 20px; /* Space below the heading */
+  color: #111; /* Color for the main heading */
+  text-align: center; /* Centered text */
+}
+
+.whypcd h3 {
+  font-size: 1.5em; /* Subheading size */
+  margin: 10px 0; /* Space around the subheading */
+  color: #111; /* Color for the subheading */
+  text-align: center; /* Centered text */
+}
+
+.whypcd p {
+  font-size: 1em; /* Paragraph size */
+  line-height: 1.6; /* Line height for readability */
+  color: #333; /* Dark color for the text */
+  margin-bottom: 20px; /* Space below the paragraph */
+  text-align: justify; /* Justified text for better alignment */
+  max-width: 600px; /* Maximum width for paragraph */
+}
+
+.whypcd img {
+  width: 100%; /* Responsive image */
+  border-radius: 8px; /* Rounded corners for images */
+  margin-top: 10px; /* Space above the image */
+  max-width: 500px; /* Limit maximum width of image */
+  height: auto; /* Maintain aspect ratio */
 }
