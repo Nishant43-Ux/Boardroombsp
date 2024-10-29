@@ -777,7 +777,7 @@ footer.About #left_wing ul li a:hover {
 .card-image {
   width: 100%; /* Responsive image */
   border-radius: 10px; /* Rounded corners for images */
-  max-height: 200px; /* Limit height for images */
+  max-height: 300px; /* Limit height for images */
   object-fit: cover; /* Maintain aspect ratio */
 }
 
